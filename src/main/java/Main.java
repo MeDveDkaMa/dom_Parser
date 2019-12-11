@@ -50,10 +50,10 @@ public class Main {
             }
         }
 
-      /*  for (int temp = 0; temp < nList.getLength(); temp++) {
+        for (int temp = 0; temp < nList.getLength(); temp++) {
             Node nNode = nList2.item(temp);
             System.out.println("\nCurrent Element :" + nNode.getNodeName() + nNode.getTextContent());
-        }*/
+        }
 
         Validate.validateXML();
     }
