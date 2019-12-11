@@ -5,8 +5,6 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.*;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.io.IOException;
 
@@ -24,9 +22,9 @@ public class Main {
         NodeList nList2 = document.getElementsByTagName("student");
 
         for (int i = 0; i < nList.getLength(); i++) {
-           Node node = nList.item(i);
-           System.out.println("");
-           if (node.getNodeType() == Node.ELEMENT_NODE)
+            Node node = nList.item(i);
+            System.out.println("");
+            if (node.getNodeType() == Node.ELEMENT_NODE)
             {
                 Element eElement = (Element) node;
                 System.out.println("id:" + eElement.getElementsByTagName("id").item(0).getTextContent());
@@ -52,8 +50,12 @@ public class Main {
             }
         }
 
-       Validate.validateXML();
-    }
+      /*  for (int temp = 0; temp < nList.getLength(); temp++) {
+            Node nNode = nList2.item(temp);
+            System.out.println("\nCurrent Element :" + nNode.getNodeName() + nNode.getTextContent());
+        }*/
 
+        Validate.validateXML();
+    }
 
 }
