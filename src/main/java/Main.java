@@ -1,16 +1,12 @@
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.Source;
-import javax.xml.transform.stream.StreamSource;
-import javax.xml.validation.Schema;
-import javax.xml.validation.SchemaFactory;
-import javax.xml.validation.Validator;
 import java.io.File;
 import java.io.IOException;
 
@@ -21,12 +17,22 @@ public class Main {
         DocumentBuilder builder = factory.newDocumentBuilder();
         Document document = builder.parse(new File("/home/alexander/IdeaProjects/Dom_Parser/src/main/resources/university.xml"));
         document.getDocumentElement().normalize();
-
         Element element = document.getDocumentElement();
-        System.out.println(element.getTagName());
+        System.out.println("Root element: " + document.getDocumentElement().getNodeName());
 
-        NodeList nodeList = element.getChildNodes();
+        NodeList nList = document.getElementsByTagName("administration");
 
+        for (int i = 0; i < nList.getLength(); i++) {
+           Node node = nList.item(i);
+            System.out.println("");
+            if (node.getNodeType() == Node.ELEMENT_NODE)
+            {
+                Element eElement = (Element) node;
+                System.out.println("id:" + element.getElementsByTagName("id").item(0).getTextContent());
+                System.out.println("Name:" + element.getElementsByTagName("FirstName").item(0).getTextContent());
+                System.out.println("Name:" + element.getElementsByTagName("LastName").item(0).getTextContent());
+            }
+        }
 
        Validate.validateXML();
 
