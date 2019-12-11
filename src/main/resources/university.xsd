@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="University" type="UniversityType"/>
+  <xs:complexType name="AddressType" mixed="true">
+    <xs:sequence>
+      <xs:element type="xs:string" name="City" minOccurs="0"/>
+      <xs:element name="position" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Rector"/>
+            <xs:enumeration value="Decanr"/>
+            <xs:enumeration value="Decan"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="administrationType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element type="xs:string" name="id"/>
+      <xs:element type="xs:string" name="FirstName"/>
+      <xs:element type="xs:string" name="LastName"/>
+      <xs:element type="xs:string" name="ContactNo"/>
+      <xs:element type="xs:string" name="Email"/>
+      <xs:element type="xs:string" name="Department"/>
+      <xs:element type="xs:string" name="Faculty"/>
+      <xs:element type="AddressType" name="Address"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="InfoType" mixed="true">
+    <xs:sequence>
+      <xs:element name="Assessments" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="4.1"/>
+            <xs:enumeration value="3.4"/>
+            <xs:enumeration value="4.3"/>
+            <xs:enumeration value="4.5"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Group" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="PIM-19"/>
+            <xs:enumeration value="VS-19"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Job" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Unemployed"/>
+            <xs:enumeration value="Employed"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Department" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="MPOEVS"/>
+            <xs:enumeration value="VS"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="Faculty" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="studentsType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element type="xs:string" name="id"/>
+      <xs:element type="xs:string" name="Firstname"/>
+      <xs:element type="xs:string" name="Lastname"/>
+      <xs:element type="xs:string" name="ContactNo"/>
+      <xs:element type="xs:string" name="Email"/>
+      <xs:element type="InfoType" name="Info"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="UniversityType">
+    <xs:sequence>
+      <xs:element type="administrationType" name="administration"/>
+      <xs:element type="studentsType" name="students"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
