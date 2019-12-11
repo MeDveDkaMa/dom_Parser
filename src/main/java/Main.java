@@ -21,16 +21,33 @@ public class Main {
         System.out.println("Root element: " + document.getDocumentElement().getNodeName());
 
         NodeList nList = document.getElementsByTagName("administration");
+        NodeList nList2 = document.getElementsByTagName("student");
 
         for (int i = 0; i < nList.getLength(); i++) {
            Node node = nList.item(i);
+           System.out.println("");
+           if (node.getNodeType() == Node.ELEMENT_NODE)
+            {
+                Element eElement = (Element) node;
+                System.out.println("id:" + eElement.getElementsByTagName("id").item(0).getTextContent());
+                System.out.println("FirstName:" + eElement.getElementsByTagName("FirstName").item(0).getTextContent());
+                System.out.println("LastName:" + eElement.getElementsByTagName("LastName").item(0).getTextContent());
+                System.out.println("ContactNo:" + eElement.getElementsByTagName("ContactNo").item(0).getTextContent());
+                System.out.println("Department:" + eElement.getElementsByTagName("Department").item(0).getTextContent());
+            }
+        }
+
+        for (int i = 0; i < nList2.getLength(); i++) {
+            Node node = nList2.item(i);
+            System.out.println("\nCurrent Element :" + node.getNodeName());
             System.out.println("");
             if (node.getNodeType() == Node.ELEMENT_NODE)
             {
                 Element eElement = (Element) node;
-                System.out.println("id:" + element.getElementsByTagName("id").item(0).getTextContent());
-                System.out.println("Name:" + element.getElementsByTagName("FirstName").item(0).getTextContent());
-                System.out.println("Name:" + element.getElementsByTagName("LastName").item(0).getTextContent());
+                System.out.println("id:" + eElement.getElementsByTagName("id").item(0).getTextContent());
+                System.out.println("FirstName:" + eElement.getElementsByTagName("Firstname").item(0).getTextContent());
+                System.out.println("LastName:" + eElement.getElementsByTagName("Lastname").item(0).getTextContent());
+                System.out.println("ContactNo:" + eElement.getElementsByTagName("ContactNo").item(0).getTextContent());
             }
         }
 

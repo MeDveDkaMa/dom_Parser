@@ -24,7 +24,7 @@ public class Validate {
 
         // 4. Разбор проверяемого документа
         Source source = new StreamSource("/home/alexander/IdeaProjects/Dom_Parser/src/main/resources/university.xml");
-
+        System.out.println("============================================");
         // 5. Валидация документа
         try {
             validator.validate(source);

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="University" type="UniversityType"/>
-  <xs:complexType name="AddressType" mixed="true">
+  <xs:complexType name="AddressType">
     <xs:sequence>
-      <xs:element type="xs:string" name="City" minOccurs="0"/>
-      <xs:element name="position" minOccurs="0">
+      <xs:element type="xs:string" name="City"/>
+      <xs:element name="position">
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="Rector"/>
@@ -16,20 +16,86 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="administrationType">
-    <xs:choice maxOccurs="unbounded" minOccurs="0">
-      <xs:element type="xs:string" name="id"/>
-      <xs:element type="xs:string" name="FirstName"/>
-      <xs:element type="xs:string" name="LastName"/>
-      <xs:element type="xs:string" name="ContactNo"/>
-      <xs:element type="xs:string" name="Email"/>
-      <xs:element type="xs:string" name="Department"/>
-      <xs:element type="xs:string" name="Faculty"/>
-      <xs:element type="AddressType" name="Address"/>
-    </xs:choice>
-  </xs:complexType>
-  <xs:complexType name="InfoType" mixed="true">
     <xs:sequence>
-      <xs:element name="Assessments" minOccurs="0">
+      <xs:element name="id">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="FirstName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Bogdan"/>
+            <xs:enumeration value="George"/>
+            <xs:enumeration value="Julius"/>
+            <xs:enumeration value="Philipn"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="LastName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Kuznetsov"/>
+            <xs:enumeration value="Petrenko"/>
+            <xs:enumeration value="Yakovlev"/>
+            <xs:enumeration value="Ermakov"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ContactNo">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="+9993331231"/>
+            <xs:enumeration value="+9993331232"/>
+            <xs:enumeration value="+9993331233"/>
+            <xs:enumeration value="+9993331234"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Email">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="rector@rsatu.ru"/>
+            <xs:enumeration value="MPOEVS@rsatu.ru"/>
+            <xs:enumeration value="VS@rsatu.ru"/>
+            <xs:enumeration value="Radio@rsatu.ru"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Department">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="All"/>
+            <xs:enumeration value="MPOEVS"/>
+            <xs:enumeration value="VS"/>
+            <xs:enumeration value="Radio"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Faculty">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="All"/>
+            <xs:enumeration value="FREI"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="AddressType" name="Address"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="administrationsType">
+    <xs:sequence>
+      <xs:element type="administrationType" name="administration" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EducationType">
+    <xs:sequence>
+      <xs:element name="Assessments">
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="4.1"/>
@@ -39,7 +105,7 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="Group" minOccurs="0">
+      <xs:element name="Group">
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="PIM-19"/>
@@ -47,15 +113,7 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="Job" minOccurs="0">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="Unemployed"/>
-            <xs:enumeration value="Employed"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
-      <xs:element name="Department" minOccurs="0">
+      <xs:element name="Department">
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="MPOEVS"/>
@@ -63,22 +121,85 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element type="xs:string" name="Faculty" minOccurs="0"/>
+      <xs:element type="xs:string" name="Faculty"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="studentType">
+    <xs:sequence>
+      <xs:element name="id">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Firstname">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Alexander"/>
+            <xs:enumeration value="Bogdan"/>
+            <xs:enumeration value="Vasily"/>
+            <xs:enumeration value="Nastya"/>
+            <xs:enumeration value="Liza"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Lastname">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Vinogradov"/>
+            <xs:enumeration value="Vasilenko"/>
+            <xs:enumeration value="Sokolov"/>
+            <xs:enumeration value="Berezinav"/>
+            <xs:enumeration value="Shikova"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ContactNo">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="+9991234212"/>
+            <xs:enumeration value="+222321234"/>
+            <xs:enumeration value="+999123122"/>
+            <xs:enumeration value="+9321234212"/>
+            <xs:enumeration value="+932234212"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Job">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Unemployed"/>
+            <xs:enumeration value="Employed"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Email">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="medaw@gmail.com"/>
+            <xs:enumeration value="bogdan21@yandex.ru"/>
+            <xs:enumeration value="test21@rambler.com"/>
+            <xs:enumeration value="berezinanasta@icloud.com"/>
+            <xs:enumeration value="testa1w@gmail.com"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="EducationType" name="Education"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="studentsType">
-    <xs:choice maxOccurs="unbounded" minOccurs="0">
-      <xs:element type="xs:string" name="id"/>
-      <xs:element type="xs:string" name="Firstname"/>
-      <xs:element type="xs:string" name="Lastname"/>
-      <xs:element type="xs:string" name="ContactNo"/>
-      <xs:element type="xs:string" name="Email"/>
-      <xs:element type="InfoType" name="Info"/>
-    </xs:choice>
+    <xs:sequence>
+      <xs:element type="studentType" name="student" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="UniversityType">
     <xs:sequence>
-      <xs:element type="administrationType" name="administration"/>
+      <xs:element type="administrationsType" name="administrations"/>
       <xs:element type="studentsType" name="students"/>
     </xs:sequence>
   </xs:complexType>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <University>
+    <administrations>
     <administration>
         <id>1</id>
         <FirstName>Bogdan</FirstName>
@@ -12,6 +13,8 @@
             <City>Rybinsk</City>
             <position>Rector</position>
         </Address>
+    </administration>
+    <administration>
         <id>2</id>
         <FirstName>George</FirstName>
         <LastName>Petrenko</LastName>
@@ -23,6 +26,8 @@
             <City>Rybinsk</City>
             <position>Decanr</position>
         </Address>
+    </administration>
+        <administration>
         <id>3</id>
         <FirstName>Julius</FirstName>
         <LastName>Yakovlev</LastName>
@@ -34,6 +39,8 @@
             <City>Rybinsk</City>
             <position>Decanr</position>
         </Address>
+        </administration>
+    <administration>
         <id>4</id>
         <FirstName>Philipn</FirstName>
         <LastName>Ermakov</LastName>
@@ -46,69 +53,77 @@
             <position>Decan</position>
         </Address>
     </administration>
-
+    </administrations>
     <students>
-        <id>1</id>
-        <Firstname>Alexander</Firstname>
-        <Lastname>Vinogradov</Lastname>
-        <ContactNo>+9991234212</ContactNo>
-        <Email>medaw@gmail.com</Email>
-        <Info>
-            <Assessments>4.1</Assessments>
-            <Group>PIM-19</Group>
+        <student>
+            <id>5</id>
+            <Firstname>Alexander</Firstname>
+            <Lastname>Vinogradov</Lastname>
+            <ContactNo>+9991234212</ContactNo>
             <Job>Unemployed</Job>
-            <Department>MPOEVS</Department>
-            <Faculty>FREI</Faculty>
-        </Info>
-        <id>1</id>
-        <Firstname>Bogdan</Firstname>
-        <Lastname>Vasilenko</Lastname>
-        <ContactNo>+222321234</ContactNo>
-        <Email>bogdan21@yandex.ru</Email>
-        <Info>
-            <Assessments>3.4</Assessments>
-            <Group>PIM-19</Group>
+            <Email>medaw@gmail.com</Email>
+            <Education>
+                <Assessments>4.1</Assessments>
+                <Group>PIM-19</Group>
+                <Department>MPOEVS</Department>
+                <Faculty>FREI</Faculty>
+            </Education>
+        </student>
+        <student>
+            <id>6</id>
+            <Firstname>Bogdan</Firstname>
+            <Lastname>Vasilenko</Lastname>
+            <ContactNo>+222321234</ContactNo>
             <Job>Unemployed</Job>
-            <Department>VS</Department>
-            <Faculty>FREI</Faculty>
-        </Info>
-        <id>1</id>
-        <Firstname>Vasily</Firstname>
-        <Lastname>Sokolov</Lastname>
-        <ContactNo>+999123122</ContactNo>
-        <Email>test21@rambler.com</Email>
-        <Info>
-            <Assessments>4.3</Assessments>
-            <Group>VS-19</Group>
+            <Email>bogdan21@yandex.ru</Email>
+            <Education>
+                <Assessments>3.4</Assessments>
+                <Group>PIM-19</Group>
+                <Department>VS</Department>
+                <Faculty>FREI</Faculty>
+            </Education>
+        </student>
+        <student>
+            <id>7</id>
+            <Firstname>Vasily</Firstname>
+            <Lastname>Sokolov</Lastname>
+            <ContactNo>+999123122</ContactNo>
             <Job>Employed</Job>
-            <Department>MPOEVS</Department>
-            <Faculty>FREI</Faculty>
-        </Info>
-        <id>1</id>
-        <Firstname>Nastya</Firstname>
-        <Lastname>Berezinav</Lastname>
-        <ContactNo>+9321234212</ContactNo>
-        <Email>berezinanasta@icloud.com</Email>
-        <Info>
-            <Assessments>4.5</Assessments>
-            <Group>PIM-19</Group>
+            <Email>test21@rambler.com</Email>
+            <Education>
+                <Assessments>4.3</Assessments>
+                <Group>VS-19</Group>
+                <Department>MPOEVS</Department>
+                <Faculty>FREI</Faculty>
+            </Education>
+        </student>
+        <student>
+            <id>8</id>
+            <Firstname>Nastya</Firstname>
+            <Lastname>Berezinav</Lastname>
+            <ContactNo>+9321234212</ContactNo>
             <Job>Unemployed</Job>
-            <Department>VS</Department>
-            <Faculty>FREI</Faculty>
-        </Info>
-        <id>1</id>
-        <Firstname>Liza</Firstname>
-        <Lastname>Shikova</Lastname>
-        <ContactNo>+932234212</ContactNo>
-        <Email>testa1w@gmail.com</Email>
-        <Info>
-            <Assessments>3.4</Assessments>
-            <Group>VS-19</Group>
+            <Email>berezinanasta@icloud.com</Email>
+            <Education>
+                <Assessments>4.5</Assessments>
+                <Group>PIM-19</Group>
+                <Department>VS</Department>
+                <Faculty>FREI</Faculty>
+            </Education>
+        </student>
+        <student>
+            <id>9</id>
+            <Firstname>Liza</Firstname>
+            <Lastname>Shikova</Lastname>
+            <ContactNo>+932234212</ContactNo>
             <Job>Unemployed</Job>
-            <Department>VS</Department>
-            <Faculty>FREI</Faculty>
-        </Info>
-
+            <Email>testa1w@gmail.com</Email>
+            <Education>
+                <Assessments>3.4</Assessments>
+                <Group>VS-19</Group>
+                <Department>VS</Department>
+                <Faculty>FREI</Faculty>
+            </Education>
+        </student>
     </students>
-
 </University>
