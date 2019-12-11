@@ -1,17 +1,17 @@
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
+import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.*;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
+    public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException, TransformerException {
 
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
@@ -48,11 +48,11 @@ public class Main {
                 System.out.println("FirstName:" + eElement.getElementsByTagName("Firstname").item(0).getTextContent());
                 System.out.println("LastName:" + eElement.getElementsByTagName("Lastname").item(0).getTextContent());
                 System.out.println("ContactNo:" + eElement.getElementsByTagName("ContactNo").item(0).getTextContent());
+                System.out.println("Assessments:" + eElement.getElementsByTagName("Assessments").item(0).getTextContent());
             }
         }
 
        Validate.validateXML();
-
     }
 
 
