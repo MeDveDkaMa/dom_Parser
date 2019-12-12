@@ -9,7 +9,12 @@ import java.io.File;
 import java.io.IOException;
 
 public class Validate {
-    public static void validateXML() throws SAXException, IOException {
+
+    public static void getValidateXML() throws IOException, SAXException {
+        validateXML();
+    }
+
+    private static void validateXML() throws SAXException, IOException {
         // 1. Поиск и создание экземпляра фабрики для языка XML Schema
         SchemaFactory factory2 = SchemaFactory.newInstance("http://www.w3.org/2001/XMLSchema");
 

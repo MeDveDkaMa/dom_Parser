@@ -50,12 +50,14 @@ public class Main {
             }
         }
 
-        for (int temp = 0; temp < nList.getLength(); temp++) {
-            Node nNode = nList2.item(temp);
-            System.out.println("\nCurrent Element :" + nNode.getNodeName() + nNode.getTextContent());
-        }
+//        for (int temp = 0; temp < nList.getLength(); temp++) {
+//            Node nNode2 = nList2.item(temp);
+//            Node nNode = nList.item(temp);
+//            System.out.println("\nCurrent Element :" + nNode2.getNodeName() + nNode2.getTextContent());
+//            System.out.println("\nCurrent Element :" + nNode.getNodeName() + nNode.getTextContent());
+//        }
 
-        Validate.validateXML();
+        Validate.getValidateXML();
     }
 
 }
