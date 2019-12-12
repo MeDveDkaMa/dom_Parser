@@ -17,41 +17,34 @@ import org.xml.sax.SAXException;
 
 public class ModifyXML {
     public static void main(String[] args) throws TransformerException, IOException, SAXException, ParserConfigurationException {
-        String filepath = "/home/alexander/IdeaProjects/Dom_Parser/src/main/resources/university2.xml";
+        String filepath = "/home/alexander/IdeaProjects/Dom_Parser/src/main/resources/ModifyXML.xml";
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
         Document doc = docBuilder.parse(filepath);
 
-        // Get the root element
-        Node company = doc.getFirstChild();
-
-        // Get the staff element , it may not working if tag has spaces, or
-        // whatever weird characters in front...it's better to use
-        // getElementsByTagName() to get it directly.
-        // Node staff = company.getFirstChild();
-
-        // Get the staff element by tag name directly
-        Node staff = doc.getElementsByTagName("student").item(0);
-
+        Node student = doc.getElementsByTagName("student").item(0);
+        int q = doc.getElementsByTagName("student").getLength();
+       // NodeList students = doc.getElementsByTagName("student");
         // update staff attribute
-        NamedNodeMap attr = staff.getAttributes();
+        NamedNodeMap attr = student.getAttributes();
+
         Node nodeAttr = attr.getNamedItem("id");
-        nodeAttr.setTextContent("222");
+        nodeAttr.setTextContent("22342");
 
         // append a new node to staff
         Element age = doc.createElement("CreatedAge");
-        age.appendChild(doc.createTextNode("288"));
-        staff.appendChild(age);
+        age.appendChild(doc.createTextNode("2858"));
+        student.appendChild(age);
 
         // loop the staff child node
-        NodeList list = staff.getChildNodes();
+        NodeList list = student.getChildNodes();
 
         for (int i = 0; i < list.getLength(); i++) {
             Node node = list.item(i);
 
             // get the salary element, and update the value
-            if ("Email".equals(node.getNodeName())) {
-                node.setTextContent("test");
+            if ("Job".equals(node.getNodeName())) {
+                node.setTextContent("работает234");
             }
 
         }

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><University>
+    <administrations>
+    <administration id="1">
+        <FirstName>Bogdan</FirstName>
+        <LastName>Kuznetsov</LastName>
+        <ContactNo>+9993331231</ContactNo>
+        <Email>rector@rsatu.ru</Email>
+        <Department>All</Department>
+        <Faculty>All</Faculty>
+        <Address>
+            <City>Rybinsk</City>
+            <position>Rector</position>
+        </Address>
+    <CreatedAge>288</CreatedAge><CreatedAge>288</CreatedAge></administration>
+    <administration id="2">
+        <FirstName>George</FirstName>
+        <LastName>Petrenko</LastName>
+        <ContactNo>+9993331232</ContactNo>
+        <Email>MPOEVS@rsatu.ru</Email>
+        <Department>MPOEVS</Department>
+        <Faculty>FREI</Faculty>
+        <Address>
+            <City>Rybinsk</City>
+            <position>Decanr</position>
+        </Address>
+    </administration>
+        <administration id="3">
+        <FirstName>Julius</FirstName>
+        <LastName>Yakovlev</LastName>
+        <ContactNo>+9993331233</ContactNo>
+        <Email>VS@rsatu.ru</Email>
+        <Department>VS</Department>
+        <Faculty>FREI</Faculty>
+        <Address>
+            <City>Rybinsk</City>
+            <position>Decanr</position>
+        </Address>
+        </administration>
+    <administration id="4">
+        <FirstName>Philipn</FirstName>
+        <LastName>Ermakov</LastName>
+        <ContactNo>+9993331234</ContactNo>
+        <Email>Radio@rsatu.ru</Email>
+        <Department>Radio</Department>
+        <Faculty>FREI</Faculty>
+        <Address>
+            <City>Rybinsk</City>
+            <position>Decan</position>
+        </Address>
+    </administration>
+    </administrations>
+    <students>
+        <student id="22342">
+            <Firstname>Alexander</Firstname>
+            <Lastname>Vinogradov</Lastname>
+            <ContactNo>+9991234212</ContactNo>
+            <Job>работает234</Job>
+            <Email>test</Email>
+            <Education>
+                <Assessments>4.1</Assessments>
+                <Group>PIM-19</Group>
+                <Department>MPOEVS</Department>
+                <Faculty>FREI</Faculty>
+            </Education>
+        <CreatedAge>2858</CreatedAge></student>
+        <student id="6">
+            <Firstname>Bogdan</Firstname>
+            <Lastname>Vasilenko</Lastname>
+            <ContactNo>+222321234</ContactNo>
+            <Job>Unemployed</Job>
+            <Email>bogdan21@yandex.ru</Email>
+            <Education>
+                <Assessments>3.4</Assessments>
+                <Group>PIM-19</Group>
+                <Department>VS</Department>
+                <Faculty>FREI</Faculty>
+            </Education>
+        </student>
+        <student id="7">
+            <Firstname>Vasily</Firstname>
+            <Lastname>Sokolov</Lastname>
+            <ContactNo>+999123122</ContactNo>
+            <Job>Employed</Job>
+            <Email>test21@rambler.com</Email>
+            <Education>
+                <Assessments>4.3</Assessments>
+                <Group>VS-19</Group>
+                <Department>MPOEVS</Department>
+                <Faculty>FREI</Faculty>
+            </Education>
+        </student>
+        <student id="8">
+            <Firstname>Nastya</Firstname>
+            <Lastname>Berezinav</Lastname>
+            <ContactNo>+9321234212</ContactNo>
+            <Job>Unemployed</Job>
+            <Email>berezinanasta@icloud.com</Email>
+            <Education>
+                <Assessments>4.5</Assessments>
+                <Group>PIM-19</Group>
+                <Department>VS</Department>
+                <Faculty>FREI</Faculty>
+            </Education>
+        </student>
+        <student id="9">
+            <Firstname>Liza</Firstname>
+            <Lastname>Shikova</Lastname>
+            <ContactNo>+932234212</ContactNo>
+            <Job>Unemployed</Job>
+            <Email>testa1w@gmail.com</Email>
+            <Education>
+                <Assessments>3.4</Assessments>
+                <Group>VS-19</Group>
+                <Department>VS</Department>
+                <Faculty>FREI</Faculty>
+            </Education>
+        </student>
+    </students>
+</University>
