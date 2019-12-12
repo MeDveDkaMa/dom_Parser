@@ -47,7 +47,6 @@ public class ModifyXML {
         NodeList list = staff.getChildNodes();
 
         for (int i = 0; i < list.getLength(); i++) {
-
             Node node = list.item(i);
 
             // get the salary element, and update the value
