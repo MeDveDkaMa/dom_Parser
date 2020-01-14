@@ -21,41 +21,15 @@ public class Main {
         NodeList nList = document.getElementsByTagName("administration");
         NodeList nList2 = document.getElementsByTagName("student");
 
-        for (int i = 0; i < nList.getLength(); i++) {
-            Node node = nList.item(i);
-            System.out.println("");
-            if (node.getNodeType() == Node.ELEMENT_NODE)
-            {
-                Element eElement = (Element) node;
-                System.out.println("id:" + eElement.getElementsByTagName("id").item(0).getTextContent());
-                System.out.println("FirstName:" + eElement.getElementsByTagName("FirstName").item(0).getTextContent());
-                System.out.println("LastName:" + eElement.getElementsByTagName("LastName").item(0).getTextContent());
-                System.out.println("ContactNo:" + eElement.getElementsByTagName("ContactNo").item(0).getTextContent());
-                System.out.println("Department:" + eElement.getElementsByTagName("Department").item(0).getTextContent());
-            }
+        for (int temp = 0; temp < nList.getLength(); temp++) {
+            Node nNode = nList.item(temp);
+            System.out.println("\nCurrent Element :" + nNode.getNodeName() + nNode.getTextContent());
         }
 
-        for (int i = 0; i < nList2.getLength(); i++) {
-            Node node = nList2.item(i);
-            System.out.println("\nCurrent Element :" + node.getNodeName());
-            System.out.println("");
-            if (node.getNodeType() == Node.ELEMENT_NODE)
-            {
-                Element eElement = (Element) node;
-                System.out.println("id:" + eElement.getElementsByTagName("id").item(0).getTextContent());
-                System.out.println("FirstName:" + eElement.getElementsByTagName("Firstname").item(0).getTextContent());
-                System.out.println("LastName:" + eElement.getElementsByTagName("Lastname").item(0).getTextContent());
-                System.out.println("ContactNo:" + eElement.getElementsByTagName("ContactNo").item(0).getTextContent());
-                System.out.println("Assessments:" + eElement.getElementsByTagName("Assessments").item(0).getTextContent());
-            }
+        for (int temp = 0; temp < nList2.getLength(); temp++) {
+            Node nNode2 = nList2.item(temp);
+            System.out.println("\nCurrent Element :" + nNode2.getNodeName() + nNode2.getTextContent());
         }
-
-//        for (int temp = 0; temp < nList.getLength(); temp++) {
-//            Node nNode2 = nList2.item(temp);
-//            Node nNode = nList.item(temp);
-//            System.out.println("\nCurrent Element :" + nNode2.getNodeName() + nNode2.getTextContent());
-//            System.out.println("\nCurrent Element :" + nNode.getNodeName() + nNode.getTextContent());
-//        }
 
         Validate.getValidateXML();
     }

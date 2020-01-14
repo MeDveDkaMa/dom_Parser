@@ -29,7 +29,7 @@ public class ModifyXML {
         NamedNodeMap attr = student.getAttributes();
 
         Node nodeAttr = attr.getNamedItem("id");
-        nodeAttr.setTextContent("22342");
+        nodeAttr.setTextContent("2234432");
 
         // append a new node to staff
         Element age = doc.createElement("CreatedAge");
@@ -43,7 +43,7 @@ public class ModifyXML {
             Node node = list.item(i);
 
             // get the salary element, and update the value
-            if ("Job".equals(node.getNodeName())) {
+            if ("Education".equals(node.getNodeName())) {
                 node.setTextContent("работает234");
             }
 

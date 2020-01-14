@@ -50,19 +50,14 @@
     </administration>
     </administrations>
     <students>
-        <student id="22342">
+        <student id="2234432">
             <Firstname>Alexander</Firstname>
             <Lastname>Vinogradov</Lastname>
             <ContactNo>+9991234212</ContactNo>
             <Job>работает234</Job>
             <Email>test</Email>
-            <Education>
-                <Assessments>4.1</Assessments>
-                <Group>PIM-19</Group>
-                <Department>MPOEVS</Department>
-                <Faculty>FREI</Faculty>
-            </Education>
-        <CreatedAge>2858</CreatedAge></student>
+            <Education>работает234</Education>
+       <CreatedAge>2858</CreatedAge><CreatedAge>2858</CreatedAge></student>
         <student id="6">
             <Firstname>Bogdan</Firstname>
             <Lastname>Vasilenko</Lastname>
