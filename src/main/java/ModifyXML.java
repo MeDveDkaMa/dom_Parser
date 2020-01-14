@@ -8,6 +8,8 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+
+import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
@@ -16,6 +18,9 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 public class ModifyXML {
+
+    private static final Logger log = Logger.getLogger(String.valueOf(ModifyXML.class));
+
     public static void main(String[] args) throws TransformerException, IOException, SAXException, ParserConfigurationException {
         String filepath = "/home/alexander/IdeaProjects/Dom_Parser/src/main/resources/ModifyXML.xml";
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
@@ -56,6 +61,7 @@ public class ModifyXML {
         transformer.transform(source, result);
 
         System.out.println("Done");
+        log.info("Done");
 
     }
 }

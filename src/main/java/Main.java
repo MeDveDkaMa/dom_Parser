@@ -1,3 +1,4 @@
+import org.apache.log4j.Logger;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
@@ -9,6 +10,9 @@ import java.io.File;
 import java.io.IOException;
 
 public class Main {
+
+    private static final Logger log = Logger.getLogger(String.valueOf(ModifyXML.class));
+
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException, TransformerException {
 
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -24,12 +28,16 @@ public class Main {
         for (int temp = 0; temp < nList.getLength(); temp++) {
             Node nNode = nList.item(temp);
             System.out.println("\nCurrent Element :" + nNode.getNodeName() + nNode.getTextContent());
+            log.info("Current Element: " + nNode.getTextContent());
         }
 
         for (int temp = 0; temp < nList2.getLength(); temp++) {
             Node nNode2 = nList2.item(temp);
             System.out.println("\nCurrent Element :" + nNode2.getNodeName() + nNode2.getTextContent());
+            log.info("Current Element: " + nNode2.getTextContent());
         }
+        log.info("End parsing ");
+
 
         Validate.getValidateXML();
     }
