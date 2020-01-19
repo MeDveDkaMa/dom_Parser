@@ -21,14 +21,14 @@ public class Validate {
         // 2. Компиляция схемы
         // Схема загружается в объект типа java.io.File, но вы также можете использовать
         // классы java.net.URL и javax.xml.transform.Source
-        File schemaLocation = new File("/home/alexander/IdeaProjects/Dom_Parser/src/main/resources/university.xsd");
+        File schemaLocation = new File("./src/main/resources/university.xsd");
         Schema schema = factory2.newSchema(schemaLocation);
 
         // 3. Создание валидатора для схемы
         Validator validator = schema.newValidator();
 
         // 4. Разбор проверяемого документа
-        Source source = new StreamSource("/home/alexander/IdeaProjects/Dom_Parser/src/main/resources/university.xml");
+        Source source = new StreamSource("./src/main/resources/university.xml");
         System.out.println("============================================");
         // 5. Валидация документа
         try {

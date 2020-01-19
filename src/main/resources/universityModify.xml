@@ -1,4 +1,4 @@
-<sas:University xmlns:sas="http://sasha.rsatu.ru">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><sas:University xmlns:sas="http://sasha.rsatu.ru">
   <sas:administrations>
     <!--Zero or more repetitions:-->
     <sas:administration>
@@ -41,16 +41,6 @@
       <!--Optional:-->
       <sas:Email>test21@rambler.com</sas:Email>
       <!--Optional:-->
-      <sas:Education>
-        <!--Optional:-->
-        <sas:Assessments>4.3</sas:Assessments>
-        <!--Optional:-->
-        <sas:Group>VS-19</sas:Group>
-        <!--Optional:-->
-        <sas:Department>VS</sas:Department>
-        <!--Optional:-->
-        <sas:Faculty>FREI</sas:Faculty>
-      </sas:Education>
     </sas:student>
   </sas:students>
 </sas:University>

@@ -1,6 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><University>
+<?xml version="1.0" encoding="UTF-8"?>
+<University>
     <administrations>
-    <administration id="1">
+    <administration>
+        <id>1</id>
         <FirstName>Bogdan</FirstName>
         <LastName>Kuznetsov</LastName>
         <ContactNo>+9993331231</ContactNo>
@@ -11,8 +13,9 @@
             <City>Rybinsk</City>
             <position>Rector</position>
         </Address>
-    <CreatedAge>288</CreatedAge><CreatedAge>288</CreatedAge></administration>
-    <administration id="2">
+    </administration>
+    <administration>
+        <id>2</id>
         <FirstName>George</FirstName>
         <LastName>Petrenko</LastName>
         <ContactNo>+9993331232</ContactNo>
@@ -24,7 +27,8 @@
             <position>Decanr</position>
         </Address>
     </administration>
-        <administration id="3">
+        <administration>
+        <id>3</id>
         <FirstName>Julius</FirstName>
         <LastName>Yakovlev</LastName>
         <ContactNo>+9993331233</ContactNo>
@@ -36,7 +40,8 @@
             <position>Decanr</position>
         </Address>
         </administration>
-    <administration id="4">
+    <administration>
+        <id>4</id>
         <FirstName>Philipn</FirstName>
         <LastName>Ermakov</LastName>
         <ContactNo>+9993331234</ContactNo>
@@ -50,15 +55,22 @@
     </administration>
     </administrations>
     <students>
-        <student id="2234432">
+        <student>
+            <id>5</id>
             <Firstname>Alexander</Firstname>
             <Lastname>Vinogradov</Lastname>
             <ContactNo>+9991234212</ContactNo>
-            <Job>работает234</Job>
-            <Email>test</Email>
-            <Education>работает234</Education>
-       <CreatedAge>2858</CreatedAge><CreatedAge>2858</CreatedAge><CreatedAge>2858</CreatedAge><CreatedAge>2858</CreatedAge><CreatedAge>2858</CreatedAge><CreatedAge>2858</CreatedAge></student>
-        <student id="6">
+            <Job>Unemployed</Job>
+            <Email>medaw@gmail.com</Email>
+            <Education>
+                <Assessments>4.1</Assessments>
+                <Group>PIM-19</Group>
+                <Department>MPOEVS</Department>
+                <Faculty>FREI</Faculty>
+            </Education>
+        </student>
+        <student>
+            <id>6</id>
             <Firstname>Bogdan</Firstname>
             <Lastname>Vasilenko</Lastname>
             <ContactNo>+222321234</ContactNo>
@@ -71,7 +83,8 @@
                 <Faculty>FREI</Faculty>
             </Education>
         </student>
-        <student id="7">
+        <student>
+            <id>7</id>
             <Firstname>Vasily</Firstname>
             <Lastname>Sokolov</Lastname>
             <ContactNo>+999123122</ContactNo>
@@ -84,7 +97,8 @@
                 <Faculty>FREI</Faculty>
             </Education>
         </student>
-        <student id="8">
+        <student>
+            <id>8</id>
             <Firstname>Nastya</Firstname>
             <Lastname>Berezinav</Lastname>
             <ContactNo>+9321234212</ContactNo>
@@ -97,7 +111,8 @@
                 <Faculty>FREI</Faculty>
             </Education>
         </student>
-        <student id="9">
+        <student>
+            <id>9</id>
             <Firstname>Liza</Firstname>
             <Lastname>Shikova</Lastname>
             <ContactNo>+932234212</ContactNo>

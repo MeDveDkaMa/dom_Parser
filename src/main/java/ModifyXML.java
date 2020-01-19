@@ -22,23 +22,23 @@ public class ModifyXML {
     private static final Logger log = Logger.getLogger(String.valueOf(ModifyXML.class));
 
     public static void main(String[] args) throws TransformerException, IOException, SAXException, ParserConfigurationException {
-        String filepath = "/home/alexander/IdeaProjects/Dom_Parser/src/main/resources/ModifyXML.xml";
+        String filepath = "./src/main/resources/universityModify.xml";
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+        docFactory.setNamespaceAware(true);
         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
         Document doc = docBuilder.parse(filepath);
 
-        Node student = doc.getElementsByTagName("student").item(0);
-        int q = doc.getElementsByTagName("student").getLength();
-       // NodeList students = doc.getElementsByTagName("student");
+        Node student = doc.getElementsByTagNameNS("http://sasha.rsatu.ru","student").item(0);
         // update staff attribute
         NamedNodeMap attr = student.getAttributes();
 
-        Node nodeAttr = attr.getNamedItem("id");
-        nodeAttr.setTextContent("2234432");
+//        Node nodeAttr = attr.getNamedItemNS("http://sasha.rsatu.ru","id");
+//        nodeAttr.setTextContent("2234432");
 
         // append a new node to staff
-        Element age = doc.createElement("CreatedAge");
-        age.appendChild(doc.createTextNode("2858"));
+        Element age = doc.createElementNS("http://sasha.rsatu.ru","Lastname");
+        age.appendChild(doc.createTextNode("ALENA"));
+        //age.appendChild(doc.c("http://sasha.rsatu.ru","Alena"));
         student.appendChild(age);
 
         // loop the staff child node
@@ -48,7 +48,7 @@ public class ModifyXML {
             Node node = list.item(i);
 
             // get the salary element, and update the value
-            if ("Education".equals(node.getNodeName())) {
+            if ("sas:Education".equals(node.getNodeName())) {
                 node.setTextContent("работает234");
             }
 
